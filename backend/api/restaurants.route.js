@@ -1,14 +1,13 @@
 import express from 'express';
+import RestaurantController from '../controllers/restaurants.controller.js';
 
 const router = express.Router();
-router.route("/").get(async (req, res, next)=>{
-    res.send("Home page - Display Restaurants")
-});
+router.route("/").get(RestaurantController.getRestaurantsAPI);
 
-router.route("/:id").get(async (req, res, next)=>{
-    const { id } = req.params;
-    res.send(`Display restaurant with id ${id}`);
-});
+router.route("/:id").get(RestaurantController.getRestaurantByIdAPI);
+
+
+
 router.route("/:id/reviews").get(async (req, res, next)=>{
     const { id } = req.params;
     res.send(`Display restaurant reviews with id ${id}`);
