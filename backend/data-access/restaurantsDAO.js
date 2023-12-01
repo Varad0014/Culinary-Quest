@@ -31,11 +31,20 @@ export default class RestaurantsDataAccess {
     static async getRestaurantById(id) {
         try {
             const restaurant = await Restaurant.findById(id);
-            return(restaurant);
+            return (restaurant);
         }
         catch (err) {
             console.log(err);
-            return(null);
+            return (null);
         }
     }
+    static async getCuisines(){
+        try {
+            const cuisines = await Restaurant.distinct("cuisine");
+            return cuisines;
+        } catch (e) {
+            console.error(`Unable to get cuisines, ${e}`);
+            return [];
+        }
+    };
 }

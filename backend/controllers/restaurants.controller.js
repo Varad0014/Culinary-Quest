@@ -43,4 +43,13 @@ export default class RestaurantController {
             console.log(err);
         }
     }
+    static async getCuisinesAPI(req, res, next) {
+        try{
+            const cuisines = await RestaurantsDataAccess.getCuisines();
+            res.json(cuisines);
+        }
+        catch(err){
+            console.log(err);
+        }
+    }
 }

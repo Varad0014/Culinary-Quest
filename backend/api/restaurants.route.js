@@ -3,7 +3,7 @@ import RestaurantController from '../controllers/restaurants.controller.js';
 
 const router = express.Router();
 router.route("/").get(RestaurantController.getRestaurantsAPI);
-
+router.route("/cuisines").get(RestaurantController.getCuisinesAPI);
 router.route("/:id").get(RestaurantController.getRestaurantByIdAPI);
 
 
