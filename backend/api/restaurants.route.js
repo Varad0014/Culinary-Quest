@@ -5,9 +5,6 @@ const router = express.Router();
 router.route("/").get(RestaurantController.getRestaurantsAPI);
 router.route("/cuisines").get(RestaurantController.getCuisinesAPI);
 router.route("/:id").get(RestaurantController.getRestaurantByIdAPI);
-
-
-
 router.route("/:id/reviews").get(async (req, res, next)=>{
     const { id } = req.params;
     res.send(`Display restaurant reviews with id ${id}`);

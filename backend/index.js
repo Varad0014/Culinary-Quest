@@ -12,15 +12,14 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: `http://localhost:${port}`,
-    method: ["GET", "POST", "DELETE", "PUT"],
-    headers: ["Content-Type"],
+    origin: "http://localhost:3000",
+    method: ["GET", "POST", "DELETE", "PUT"]
   })
 );
 
 // base URL
 app.use("/restaurants", restaurantRouter)
-app.use("*", (req, res) => (res.status(404).json({error: "Route does not exist"})));
+app.use("*", (req, res) => (res.status(404).json({ error: "Route does not exist" })));
 
 mongoose
   .connect(process.env.DBURL)
