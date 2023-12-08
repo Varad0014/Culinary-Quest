@@ -1,0 +1,17 @@
+---
+- name: Deploy MERN Application
+  hosts: all
+
+  tasks:
+    - name: Pull Frontend Image
+      docker_image:
+        name: tejdocker32/frontend-img:latest
+        source: pull
+
+    - name: Pull Backend Image
+      docker_image:
+        name: tejdocker32/backend-img:latest
+        source: pull
+
+    - name: Run Docker Compose
+      command: docker compose up
