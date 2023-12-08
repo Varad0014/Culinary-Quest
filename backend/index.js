@@ -5,7 +5,7 @@ import cors from "cors";
 import restaurantRouter from "./api/restaurants.route.js"
 
 dotenv.config();
-const port = process.env.PORT || 8000;
+const port = process.env.PORT;
 
 
 const app = express();
@@ -20,7 +20,7 @@ app.use(
 // base URL
 app.use("/restaurants", restaurantRouter)
 app.use("*", (req, res) => (res.status(404).json({ error: "Route does not exist" })));
-
+console.log("index.js running");
 mongoose
   .connect(process.env.DBURL)
   .then(() => {

@@ -18,11 +18,11 @@ function RestaurantsList() {
                 console.log(e);
             });
     };
-    return (<ul>
+    return (<div><div>List of restaurants</div><ul>
         {restaurants.map((restaurant) => {
-            return(<Restaurant {...restaurant}/>)
+            return (<Restaurant {...restaurant} />)
         })}
-    </ul>)
+    </ul></div>)
 }
 
 export default RestaurantsList;
