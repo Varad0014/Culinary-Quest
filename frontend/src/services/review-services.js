@@ -1,7 +1,7 @@
 import http from "http.js";
 
-class RestaurantDataService {
-  getRestaurants(page = 0) {
+class ReviewDataService {
+  getReviews(page = 0) {
     return http.get(`?page=${page}`);
   }
   getRestaurantByID(id) {
@@ -15,4 +15,4 @@ class RestaurantDataService {
   }
 }
 
-export default new RestaurantDataService();
+export default new ReviewDataService();

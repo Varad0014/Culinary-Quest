@@ -1,6 +1,25 @@
 import ReviewsDataAccess from "../data-access/reviewsDAO.js";
 
 export default class ReviewsController {
+  static async getReviewsAPI(req, res, next) {
+    try {
+      const restaurantId = req.params.id;
+
+      const { reviewsList, totalNumReviews } =
+        await ReviewsDataAccess.getReviews(restaurantId);
+      console.log(reviewsList);
+
+      const response = {
+        reviews: reviewsList,
+        totalResults: totalNumReviews,
+      };
+      res.json(response);
+      res.json({ status: "success" });
+    } catch (e) {
+      res.status(500).json({ error: e.message });
+    }
+  }
+
   static async postReviewAPI(req, res, next) {
     try {
       const restaurantId = req.body.restaurantId;
@@ -11,7 +30,7 @@ export default class ReviewsController {
       };
       //   const date = new Date();
 
-      const ReviewResponse = await ReviewsDataAccess.addReview(
+      const reviewResponse = await ReviewsDataAccess.addReview(
         restaurantId,
         userInfo,
         review

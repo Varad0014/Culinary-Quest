@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router";
 import { Link } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css'
+import "bootstrap/dist/css/bootstrap.min.css";
 import RestaurantsList from "./components/RestaurantsList";
 import RestaurantDetails from "./components/RestaurantDetails";
 import LoginPage from "./components/LoginPage";
@@ -48,10 +48,8 @@ function App() {
         <Routes>
           <Route path="/restaurants" element={<RestaurantsList />} />
           <Route path="/restaurants/:id" element={<RestaurantDetails />} />
-          <Route
-            path="/login"
-            element={<LoginPage login={login} />}
-          />
+          <Route path="/login" element={<LoginPage login={login} />} />
+          <Route path="/restaurants/:id/reviews" element={<ReviewsList />} />
         </Routes>
       </div>
     </div>

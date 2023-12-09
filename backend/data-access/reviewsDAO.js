@@ -3,6 +3,20 @@ import Review from "../models/review.js";
 import mongoose from "mongoose";
 
 export default class ReviewsDataAccess {
+  static async getReviews(restaurantId) {
+    try {
+      const getResponse = await Review.find({
+        restaurantId: new mongoose.Types.ObjectId(restaurantId),
+      });
+
+      console.log(getResponse);
+      // return getResponse.
+      return { reviewsList: getResponse, totalNumReviews: getResponse.length };
+    } catch (e) {
+      console.error(`Unable to update review: ${e}`);
+    }
+  }
+
   static async addReview(restaurantId, user, review) {
     try {
       const reviewDoc = [
