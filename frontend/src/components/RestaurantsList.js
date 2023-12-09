@@ -31,7 +31,7 @@ function RestaurantsList() {
     };
 
     const getAllRestaurants = () => {
-        RestaurantDataService.getRestaurantsDB()
+        RestaurantDataService.getRestaurants()
             .then(response => {
                 console.log(response.data);
                 setRestaurants(response.data.restaurants);
@@ -41,7 +41,7 @@ function RestaurantsList() {
             });
     };
     const getAllCuisines = () => {
-        RestaurantDataService.getCuisinesDB()
+        RestaurantDataService.getCuisines()
             .then(response => {
                 console.log(response.data);
                 setCuisines(["All Cuisines"].concat(response.data));

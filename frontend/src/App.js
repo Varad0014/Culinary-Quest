@@ -3,7 +3,8 @@ import { Routes, Route } from "react-router";
 import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import RestaurantsList from "./components/RestaurantsList";
-import LoginPage from "./components/LoginPage.js";
+import RestaurantDetails from "./components/RestaurantDetails";
+import LoginPage from "./components/LoginPage";
 
 function App() {
   const [user, setUser] = React.useState(null);
@@ -46,6 +47,7 @@ function App() {
       <div className="container mt-3">
         <Routes>
           <Route path="/restaurants" element={<RestaurantsList />} />
+          <Route path="/restaurants/:id" element={<RestaurantDetails />} />
           <Route
             path="/login"
             element={<LoginPage login={login} />}
