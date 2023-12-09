@@ -22,6 +22,10 @@ const restaurantSchema = new mongoose.Schema({
             type: String,
             required: true
         }
+    },
+    contact: {
+        phone: String,
+        email: String
     }
 });
 const Restaurant = mongoose.model('Restaurant', restaurantSchema);
