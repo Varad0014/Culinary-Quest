@@ -9,10 +9,16 @@ const http = axios.create({
 
 
 class RestaurantDataService {
-    getAllRestaurants(page = 0) {
-      return http.get(`?page=${page}`);
-    }
-    
+  getRestaurantsDB(page = 0) {
+    return http.get(`?page=${page}`);
   }
-  
-  export default new RestaurantDataService();
+  getCuisinesDB() {
+    return http.get(`/cuisines`);
+  }
+  find(query, by = "name", page = 0) {
+    return http.get(`?${by}=${query}&page=${page}`);
+  }
+
+}
+
+export default new RestaurantDataService();
