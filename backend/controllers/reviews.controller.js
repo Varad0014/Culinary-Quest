@@ -56,7 +56,7 @@ export default class ReviewsController {
     try {
       const reviewId = req.params.reviewId;
       // const userId = req.body.userId
-      console.log(reviewId);
+      // console.log(reviewId);
       const reviewResponse = await ReviewsDataAccess.deleteReview(reviewId);
       res.json({ status: "success" });
     } catch (e) {
