@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import RestaurantsList from "./components/RestaurantsList";
 import RestaurantDetails from "./components/RestaurantDetails";
+import ReviewsList from "./components/ReviewsList"
 import LoginPage from "./components/LoginPage";
 
 function App() {
@@ -47,9 +48,9 @@ function App() {
       <div className="container mt-3">
         <Routes>
           <Route path="/restaurants" element={<RestaurantsList />} />
-          <Route path="/restaurants/:id" element={<RestaurantDetails />} />
+          <Route path="/restaurants/:restaurantId/" element={<RestaurantDetails />} />
           <Route path="/login" element={<LoginPage login={login} />} />
-          <Route path="/restaurants/:id/reviews" element={<ReviewsList />} />
+          <Route path="/restaurants/:restaurantId/reviews" element={<ReviewsList />} />
         </Routes>
       </div>
     </div>

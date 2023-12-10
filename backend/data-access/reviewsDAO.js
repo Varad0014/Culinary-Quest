@@ -10,10 +10,10 @@ export default class ReviewsDataAccess {
       });
 
       console.log(getResponse);
-      // return getResponse.
       return { reviewsList: getResponse, totalNumReviews: getResponse.length };
     } catch (e) {
-      console.error(`Unable to update review: ${e}`);
+      console.error(`Unable to get reviews: ${e}`);
+      return { reviewsList: [], totalNumReviews: 0 };
     }
   }
 
@@ -23,41 +23,35 @@ export default class ReviewsDataAccess {
         {
           username: user.name,
           userId: user._id,
-          // date: date,
           text: review,
           restaurantId: new mongoose.Types.ObjectId(restaurantId),
         },
       ];
-
-      // return await reviews.insertOne(reviewDoc)
-
       const rev = await Review.insertMany(reviewDoc);
       console.log(rev);
     } catch (e) {
       console.error(`Unable to post review: ${e}`);
+      throw e;
     }
   }
 
-  static async updateReview(reviewId, userId, text) {
+  static async updateReview(reviewId, text) {
     try {
-      const updateResponse = await Review.findOneAndUpdate(
-        { userId: userId, _id: new mongoose.Types.ObjectId(reviewId) },
-        { text: text }
-      );
-
+      const updateResponse = await Review.findByIdAndUpdate(reviewId, { text: text },  { new: true });
       console.log(updateResponse);
     } catch (e) {
       console.error(`Unable to update review: ${e}`);
+      throw e;
     }
   }
 
   static async deleteReview(reviewId) {
     try {
       const deleteResponse = await Review.findByIdAndDelete(reviewId);
-
       console.log(deleteResponse);
     } catch (e) {
       console.error(`Unable to delete review: ${e}`);
+      throw e;
     }
   }
 }

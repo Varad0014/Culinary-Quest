@@ -5,11 +5,12 @@ import ReviewsController from "../controllers/reviews.controller.js";
 const router = express.Router();
 router.route("/").get(RestaurantController.getRestaurantsAPI);
 router.route("/cuisines").get(RestaurantController.getCuisinesAPI);
-router.route("/:id").get(RestaurantController.getRestaurantByIdAPI);
+router.route("/:restaurantId").get(RestaurantController.getRestaurantByIdAPI);
 
-router.route("/:id/reviews").get(ReviewsController.getReviewsAPI);
-
-router.route("/:id/reviews").post(ReviewsController.postReviewAPI);
+router.route("/:restaurantId/reviews").get(ReviewsController.getReviewsAPI);
+router.route("/:restaurantId/reviews").post(ReviewsController.postReviewAPI);
+router.route("/:restaurantId/reviews/:reviewId").patch(ReviewsController.updateReviewAPI);
+router.route("/:restaurantId/reviews/:reviewId").delete(ReviewsController.deleteReviewAPI);
 
 // router.route("/:id/reviews/new").get(async (req, res, next) => {
 //   const { id } = req.params;
@@ -23,10 +24,6 @@ router.route("/:id/reviews").post(ReviewsController.postReviewAPI);
 //   );
 // });
 
-router.route("/:id/reviews/:reviewId").patch(ReviewsController.updateReviewAPI);
 
-router
-  .route("/:id/reviews/:reviewId")
-  .delete(ReviewsController.deleteReviewAPI);
 
 export default router;

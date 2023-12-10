@@ -6,18 +6,18 @@ import Restaurant from "./Restaurant.js";
 
 
 function RestaurantDetails() {
-    const { id } = useParams();
+    const { restaurantId } = useParams();
     const initialRestaurantState = {
-        id: null,
+        restaurantId: null,
         name: "",
         address: {},
         cuisine: "",
         contact: {},
-        reviews: [],
+        reviews: [], 
     };
     const [restaurant, setRestaurant] = useState(initialRestaurantState);
-    const getRestaurantByID = (id) => {
-        RestaurantDataService.getRestaurantByID(id)
+    const getRestaurantByID = (restaurantId) => {
+        RestaurantDataService.getRestaurantByID(restaurantId)
             .then(response => {
                 console.log(response.data);
                 setRestaurant(response.data);
@@ -27,8 +27,8 @@ function RestaurantDetails() {
             });
     }
     useEffect(() => {
-        getRestaurantByID(id);
-    }, [id]);
+        getRestaurantByID(restaurantId);
+    }, [restaurantId]);
 
     return (<div>
 

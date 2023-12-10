@@ -1,11 +1,11 @@
-import http from "http.js";
+import http from "./http.js";
 
 class RestaurantDataService {
   getRestaurants(page = 0) {
     return http.get(`?page=${page}`);
   }
-  getRestaurantByID(id) {
-    return http.get(`/${id}`);
+  getRestaurantByID(restaurantId) {
+    return http.get(`/${restaurantId}`);
   }
   getCuisines() {
     return http.get(`/cuisines`);

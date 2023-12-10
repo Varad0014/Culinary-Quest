@@ -34,9 +34,9 @@ export default class RestaurantController {
     }
 
     static async getRestaurantByIdAPI(req, res, next) {
-        const {id} = req.params;
+        const {restaurantId} = req.params;
         try{
-            const restaurant = await RestaurantsDataAccess.getRestaurantById(id);
+            const restaurant = await RestaurantsDataAccess.getRestaurantById(restaurantId);
             res.json(restaurant);
         }
         catch(err){
