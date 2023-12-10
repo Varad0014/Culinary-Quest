@@ -6,6 +6,8 @@ import RestaurantsList from "./components/RestaurantsList";
 import RestaurantDetails from "./components/RestaurantDetails";
 import ReviewsList from "./components/ReviewsList";
 import LoginPage from "./components/LoginPage";
+import EditReview from "./components/EditReview";
+import AddReview from "./components/AddReview";
 
 function App() {
   const [user, setUser] = React.useState(null);
@@ -49,13 +51,21 @@ function App() {
         <Routes>
           <Route path="/restaurants" element={<RestaurantsList />} />
           <Route
-            path="/restaurants/:restaurantId/"
+            path="/restaurants/:restaurantId"
             element={<RestaurantDetails />}
           />
           <Route path="/login" element={<LoginPage login={login} />} />
           <Route
             path="/restaurants/:restaurantId/reviews"
             element={<ReviewsList user={user} />}
+          />
+          <Route
+            path="/restaurants/:restaurantId/reviews/new"
+            element={<AddReview user={user} />}
+          />
+          <Route
+            path="/restaurants/:restaurantId/reviews/:reviewId/edit"
+            element={<EditReview user={user} />}
           />
         </Routes>
       </div>

@@ -1,4 +1,4 @@
-import Restaurant from "../models/restaurant.js";
+
 import Review from "../models/review.js";
 import mongoose from "mongoose";
 
@@ -16,7 +16,16 @@ export default class ReviewsDataAccess {
       return { reviewsList: [], totalNumReviews: 0 };
     }
   }
-
+  static async getReviewById(reviewId) {
+    try {
+      const review = await Review.findById(reviewId);
+      return (review);
+    }
+    catch (err) {
+      console.log(err);
+      return (null);
+    }
+  }
   static async addReview(restaurantId, user, review) {
     try {
       const reviewDoc = [
@@ -27,6 +36,7 @@ export default class ReviewsDataAccess {
           restaurantId: new mongoose.Types.ObjectId(restaurantId),
         },
       ];
+      console.log(reviewDoc);
       const rev = await Review.insertMany(reviewDoc);
       console.log(rev);
     } catch (e) {
@@ -37,7 +47,7 @@ export default class ReviewsDataAccess {
 
   static async updateReview(reviewId, text) {
     try {
-      const updateResponse = await Review.findByIdAndUpdate(reviewId, { text: text },  { new: true });
+      const updateResponse = await Review.findByIdAndUpdate(reviewId, { text: text }, { new: true });
       console.log(updateResponse);
     } catch (e) {
       console.error(`Unable to update review: ${e}`);

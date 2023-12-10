@@ -17,6 +17,17 @@ export default class ReviewsController {
       res.status(500).json({ error: e.message });
     }
   }
+  static async getReviewByIdAPI(req, res, next) {
+    const { reviewId } = req.params;
+    console.log(reviewId);
+    try {
+      const review = await ReviewsDataAccess.getReviewById(reviewId);
+      res.json(review);
+    }
+    catch (err) {
+      console.log(err); 
+    }
+  }
 
   static async postReviewAPI(req, res, next) {
     try {
@@ -41,8 +52,6 @@ export default class ReviewsController {
     try {
       const reviewId = req.params.reviewId;
       const text = req.body.text;
-      console.log(reviewId);
-      console.log(text);
       const reviewResponse = await ReviewsDataAccess.updateReview(
         reviewId,
         text

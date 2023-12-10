@@ -2,7 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import ReviewDataService from "../services/review-services.js";
 import { Link, useParams } from "react-router-dom";
-import Review from "./Review.js";
+
+
 function ReviewsList({ user }) {
   const { restaurantId } = useParams();
   const [reviews, setReviews] = useState([]);
@@ -73,12 +74,7 @@ function ReviewsList({ user }) {
                         Delete
                       </button>
                       <Link
-                        to={{
-                          pathname: `/restaurants/${id}/review`,
-                          state: {
-                            currentReview: review,
-                          },
-                        }}
+                        to={`/restaurants/${restaurantId}/reviews/${review._id}/edit`}
                         className="btn btn-primary col-lg-5 mx-1 mb-1"
                         style={{ backgroundColor: "rgb(102, 16, 242)" }}
                       >
@@ -91,6 +87,9 @@ function ReviewsList({ user }) {
             </div>
           );
         })}
+        <Link to={`/restaurants/${restaurantId}/reviews/new`}>
+        Add Review
+        </Link>
       </div>
     </div>
   );
