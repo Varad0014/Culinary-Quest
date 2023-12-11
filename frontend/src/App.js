@@ -2,12 +2,14 @@ import React from "react";
 import { Routes, Route } from "react-router";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import RestaurantsList from "./components/RestaurantsList";
 import RestaurantDetails from "./components/RestaurantDetails";
 import ReviewsList from "./components/ReviewsList";
 import LoginPage from "./components/LoginPage";
 import EditReview from "./components/EditReview";
 import AddReview from "./components/AddReview";
+import "./css/App.css"
 
 function App() {
   const [user, setUser] = React.useState(null);
@@ -20,17 +22,20 @@ function App() {
 
   return (
     <div className="App">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-sm navbar-light px-3">
         <a href="/restaurants" className="navbar-brand">
           Culinary Quest
         </a>
-        <div className="navbar-nav mr-auto">
-          <li className="nav-item">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <li className="nav-item mx-1 d-flex justify-content-center align-items-center">
             <Link to={"/restaurants"} className="nav-link">
               All Restaurants
             </Link>
           </li>
-          <li className="nav-item">
+          <li className="nav-item mx-1 d-flex justify-content-center align-items-center">
             {user ? (
               <a
                 onClick={logout}
@@ -47,6 +52,8 @@ function App() {
           </li>
         </div>
       </nav>
+
+      
       <div className="container mt-3">
         <Routes>
           <Route path="/restaurants" element={<RestaurantsList />} />

@@ -1,0 +1,40 @@
+.card{
+    background-color: #2196f3;
+    color: white;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    border: 2px solid rgb(70, 70, 250);
+    
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card-title{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.card-text{
+    font-size: 1.4rem;
+
+}
+
+
+
+.card a.btn-outline-primary {
+    font-size: 1.6rem;
+    color: rgb(70, 70, 250);
+    background-color: white; 
+    border-color: rgb(70, 70, 250);
+}
+  
+.card a.btn-outline-primary:hover {
+    background-color: rgb(70, 70, 250); 
+    color: white; 
+  }
