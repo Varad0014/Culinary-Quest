@@ -3,7 +3,7 @@
 }
 
 .App nav a{
-    color: rgb(255, 255, 255)
+    color: rgb(255, 255, 255) !important;
 }
 .App a.navbar-brand{
     font-size: 1.6rem;
