@@ -54,7 +54,7 @@ function App() {
       </nav>
 
       
-      <div className="container mt-3">
+      <div className="container-xxl container-fluid">
         <Routes>
           <Route path="/restaurants" element={<RestaurantsList />} />
           <Route
