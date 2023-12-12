@@ -1,4 +1,4 @@
-.restaurant-card{
+.review-card{
     background-color: #2196f3;
     color: white;
     width: 400px;
@@ -7,34 +7,43 @@
     border: 2px solid rgb(70, 70, 250);
     
 }
-.restaurant-card .card-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
 
-.restaurant-card .card-title{
+
+.review-card .card-title{
     text-align: center;
     font-size: 1.8rem;
     text-transform: uppercase;
     letter-spacing: 1.2px;
 }
 
-.restaurant-card .card-text{
+.review-card .card-text{
     font-size: 1.4rem;
+    height: 80%;
+    
 
 }
 
 
 
-.restaurant-card a.btn-outline-primary {
+.review-card a.btn-primary {
+    font-size: 1.6rem;
+    color: rgb(70, 70, 250);
+    background-color: white; 
+    border-color: rgb(70, 70, 250);
+}
+.review-card a.btn-primary:hover {
+    background-color: rgb(70, 70, 250); 
+    color: white; 
+}
+
+.review-card button {
     font-size: 1.6rem;
     color: rgb(70, 70, 250);
     background-color: white; 
     border-color: rgb(70, 70, 250);
 }
   
-.restaurant-card a.btn-outline-primary:hover {
+.review-card button{
     background-color: rgb(70, 70, 250); 
     color: white; 
   }

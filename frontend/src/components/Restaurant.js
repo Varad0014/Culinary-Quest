@@ -21,12 +21,11 @@ function Restaurant({ restaurant }) {
       <div className="col-xl-4 col-md-6 d-flex justify-content-center  my-3">
       <Tilt options={defaultOptions} style={{ height: "100%", width: "100%" }}>
         <div
-          className="card"
+          className="restaurant-card card"
         >
           <div className="card-body">
             <h5
               className="card-title"
-
             >
               {restaurant.name}
             </h5>
