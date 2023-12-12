@@ -1,8 +1,9 @@
 ---
 - name: Deploy MERN Application
   hosts: all
+
   vars:
-    ansible_python_interpreter: /usr/bin/python3
+    ansible_python_interpreter: /Users/varadbadhe/opt/anaconda3/share/man/man1/python3.1
   tasks:
     - name: Pull Frontend Image
       docker_image:
