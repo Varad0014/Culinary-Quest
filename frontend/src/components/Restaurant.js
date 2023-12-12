@@ -36,7 +36,7 @@ function Restaurant({ restaurant }) {
               <div className="my-2"><b>Zipcode:</b> {restaurant.address.zipcode}</div>
 
             </div>
-            <div style={{ display: "flex", justifyContent: "center" }}>
+            <div className="d-flex flex-column align-items-center" >
               <Link
                 to={`/restaurants/${restaurant._id}`}
                 className="btn btn-outline-primary col-lg-5 mx-1"

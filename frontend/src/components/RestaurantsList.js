@@ -84,15 +84,15 @@ function RestaurantsList() {
 
 
     return (<div>
-        <div className="row pb-1">
-            <div className="input-group col-lg-4">
+        <div className="row">
+            <div className="input-group col-lg-4 mt-3 mb-2">
                 <input
                     type="text"
                     className="form-control"
                     placeholder="Search Restaurant by Name"
                     value={searchName}
                     onChange={onChangeSearchName}
-                    style={{ "borderRadius": "30px" }}
+                    
                 />
                 <div className="input-group-append">
                     <button
@@ -104,14 +104,14 @@ function RestaurantsList() {
                     </button>
                 </div>
             </div>
-            <div className="input-group col-lg-4">
+            <div className="input-group col-lg-4  my-2">
                 <input
                     type="text"
                     className="form-control"
                     placeholder="Search Restaurant by Zip Code"
                     value={searchZip}
                     onChange={onChangeSearchZip}
-                    style={{ "borderRadius": "30px" }}
+                    
                 />
                 <div className="input-group-append">
                     <button
@@ -123,9 +123,9 @@ function RestaurantsList() {
                     </button>
                 </div>
             </div>
-            <div className="input-group col-lg-4">
+            <div className="input-group col-lg-4 my-2">
 
-                <select onChange={onChangeSearchCuisine} style={{ "borderRadius": "30px" }}>
+                <select onChange={onChangeSearchCuisine} >
                     {cuisines.map(cuisine => {
                         return (
                             <option value={cuisine}> {cuisine.substr(0, 20)} </option>

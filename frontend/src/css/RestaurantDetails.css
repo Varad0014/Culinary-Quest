@@ -1,0 +1,30 @@
+.outside-container{
+    min-height: 100vh;
+    color: white;
+}
+
+.restaurant-item{
+    min-height: 60vh;
+    background-color: #2196f3;
+    border: 4px solid rgb(70, 70, 250);
+    border-radius: 40px;
+}
+
+.restaurant-item h3{
+    font-size: 4rem;
+}   
+
+.restaurant-item a.btn-outline-primary {
+    font-size: 1.6rem;
+    color: rgb(70, 70, 250);
+    background-color: white; 
+    border-color: rgb(70, 70, 250);
+}
+
+.restaurant-item a.btn-outline-primary:hover {
+    background-color: rgb(70, 70, 250); 
+    color: white; 
+  }
+.details{
+    font-size: 1.5rem;
+}
