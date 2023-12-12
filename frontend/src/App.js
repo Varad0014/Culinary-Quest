@@ -9,7 +9,7 @@ import ReviewsList from "./components/ReviewsList";
 import LoginPage from "./components/LoginPage";
 import EditReview from "./components/EditReview";
 import AddReview from "./components/AddReview";
-import "./css/App.css"
+import "./css/App.css";
 
 function App() {
   const [user, setUser] = React.useState(null);
@@ -26,7 +26,15 @@ function App() {
         <a href="/restaurants" className="navbar-brand">
           Culinary Quest
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -53,7 +61,6 @@ function App() {
         </div>
       </nav>
 
-      
       <div className="container-xxl container-fluid">
         <Routes>
           <Route path="/restaurants" element={<RestaurantsList />} />

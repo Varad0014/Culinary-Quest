@@ -1,0 +1,10 @@
+{"level":"info","message":"Database is connected and server is running","timestamp":"2023-12-12 17:45:08"}
+{"level":"info","message":"Getting all restaurants with ID: 6574a6698faa9633480ed91c","timestamp":"2023-12-12 17:55:14"}
+{"level":"info","message":"Getting reviews of the restuarant with Id:6574a6698faa9633480ed91c","timestamp":"2023-12-12 17:55:15"}
+{"level":"info","message":"Getting all restaurants with ID: 6574a6698faa9633480ed91c","timestamp":"2023-12-12 17:55:18"}
+{"level":"info","message":"Getting all restaurants","timestamp":"2023-12-12 17:55:18"}
+{"level":"info","message":"Getting cuisines","timestamp":"2023-12-12 17:55:18"}
+{"level":"info","message":"Getting all restaurants","timestamp":"2023-12-12 20:24:11"}
+{"level":"info","message":"Getting all restaurants with ID: 6574a6698faa9633480ed91c","timestamp":"2023-12-12 20:24:30"}
+{"level":"info","message":"Database is connected and server is running","timestamp":"2023-12-12 20:24:56"}
+{"level":"info","message":"Database is connected and server is running","timestamp":"2023-12-12 20:29:11"}

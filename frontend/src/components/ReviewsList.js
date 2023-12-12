@@ -2,9 +2,24 @@ import React from "react";
 import { useState, useEffect } from "react";
 import ReviewDataService from "../services/review-services.js";
 import { Link, useParams } from "react-router-dom";
+<<<<<<< HEAD
 import { Tilt } from 'react-tilt'
+=======
+import { Tilt } from "react-tilt";
+>>>>>>> 04ade6a (All changes regrading docker)
 import "../css/ReviewsList.css";
 
+const defaultOptions = {
+  reverse: false, // reverse the tilt direction
+  max: 35, // max tilt rotation (degrees)
+  perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
+  scale: 1.1, // 2 = 200%, 1.5 = 150%, etc..
+  speed: 1000, // Speed of the enter/exit transition
+  transition: true, // Set a transition on enter/exit.
+  axis: null, // What axis should be disabled. Can be X or Y.
+  reset: true, // If the tilt effect has to be reset on exit.
+  easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
+};
 
 const defaultOptions = {
   reverse: false,  // reverse the tilt direction
@@ -92,7 +107,11 @@ function ReviewsList({ user }) {
             </div>
           );
         })}
+<<<<<<< HEAD
 
+=======
+        <Link to={`/restaurants/${restaurantId}/reviews/new`}>Add Review</Link>
+>>>>>>> 04ade6a (All changes regrading docker)
       </div>
     </div>
   );
