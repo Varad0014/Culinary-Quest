@@ -3,16 +3,16 @@ version: "3.9"
 services:
   mongo_db:
     container_name: mongo_container
-    image: tejdocker32/restaurantmongo:latest
+    image: jaguar/restaurantmongo:latest
 
   backend:
-    image: tejdocker32/backend-img
+    image: jaguar/backend-img
     ports:
       - "4000:4000"
     environment:
       - DBURL=mongodb://mongo_db:27017/restaurantsDB
       - PORT=4000
   frontend:
-    image: tejdocker32/frontend-img
+    image: jaguar/frontend-img
     ports:
       - "3000:3000"
