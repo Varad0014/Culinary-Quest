@@ -1,8 +1,8 @@
-
 import Review from "../models/review.js";
 import mongoose from "mongoose";
 
 export default class ReviewsDataAccess {
+  //Get all reviews for a particular restuarant
   static async getReviews(restaurantId) {
     try {
       const getResponse = await Review.find({
@@ -19,11 +19,10 @@ export default class ReviewsDataAccess {
   static async getReviewById(reviewId) {
     try {
       const review = await Review.findById(reviewId);
-      return (review);
-    }
-    catch (err) {
+      return review;
+    } catch (err) {
       console.log(err);
-      return (null);
+      return null;
     }
   }
   static async addReview(restaurantId, user, review) {
@@ -47,7 +46,11 @@ export default class ReviewsDataAccess {
 
   static async updateReview(reviewId, text) {
     try {
-      const updateResponse = await Review.findByIdAndUpdate(reviewId, { text: text }, { new: true });
+      const updateResponse = await Review.findByIdAndUpdate(
+        reviewId,
+        { text: text },
+        { new: true }
+      );
       console.log(updateResponse);
     } catch (e) {
       console.error(`Unable to update review: ${e}`);
