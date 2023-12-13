@@ -1,7 +1,7 @@
 import React from "react";
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../css/LoginPage.css"
 
 const LoginPage = (props) => {
   const initialUserState = {
@@ -24,9 +24,9 @@ const LoginPage = (props) => {
   };
 
   return (
-    <div className="submit-form">
-      <div>
-        <div className="form-group">
+    <div className="submit-form login-page">
+      <div className="login-page-container d-flex flex-column justify-content-center">
+        <div className="form-group mb-1">
           <label htmlFor="user">Username</label>
           <input
             type="text"
@@ -39,7 +39,7 @@ const LoginPage = (props) => {
           />
         </div>
 
-        <div className="form-group">
+        <div className="form-group mt-1 mb-5">
           <label htmlFor="id">ID</label>
           <input
             type="text"
@@ -52,7 +52,7 @@ const LoginPage = (props) => {
           />
         </div>
 
-        <button onClick={login} className="btn btn-success">
+        <button onClick={login} className="btn btn-outline-primary my-3">
           Login
         </button>
       </div>

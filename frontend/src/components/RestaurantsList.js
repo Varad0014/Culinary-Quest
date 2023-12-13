@@ -84,11 +84,10 @@ function RestaurantsList() {
 
 
     return (<div>
-        <div className="row">
-            <div className="input-group col-lg-4 mt-3 mb-2">
+        <div className="row restaurant-list">
+            <div className="input-group mt-3 mb-2 d-flex justify-content-between">
                 <input
                     type="text"
-                    className="form-control"
                     placeholder="Search Restaurant by Name"
                     value={searchName}
                     onChange={onChangeSearchName}
@@ -104,10 +103,9 @@ function RestaurantsList() {
                     </button>
                 </div>
             </div>
-            <div className="input-group col-lg-4  my-2">
+            <div className="input-group my-2 d-flex justify-content-between">
                 <input
                     type="text"
-                    className="form-control"
                     placeholder="Search Restaurant by Zip Code"
                     value={searchZip}
                     onChange={onChangeSearchZip}
@@ -123,7 +121,7 @@ function RestaurantsList() {
                     </button>
                 </div>
             </div>
-            <div className="input-group col-lg-4 my-2">
+            <div className="input-group my-2">
 
                 <select onChange={onChangeSearchCuisine} >
                     {cuisines.map(cuisine => {

@@ -9,6 +9,7 @@ import ReviewsList from "./components/ReviewsList";
 import LoginPage from "./components/LoginPage";
 import EditReview from "./components/EditReview";
 import AddReview from "./components/AddReview";
+import NotFound from "./components/NotFound";
 import "./css/App.css";
 
 function App() {
@@ -81,6 +82,7 @@ function App() {
             path="/restaurants/:restaurantId/reviews/:reviewId/edit"
             element={<EditReview user={user} />}
           />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </div>

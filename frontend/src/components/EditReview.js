@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import ReviewDataService from "../services/review-services.js";
 import { Link, useParams } from "react-router-dom";
-
+import "../css/EditReview.css"
 
 
 function EditReview({ user }) {
@@ -52,14 +52,14 @@ function EditReview({ user }) {
         <div className="submit-form">
           {submitted ? (
             <div>
-              <h4>You submitted successfully!</h4>
-              <Link to={`/restaurants/${restaurantId}/reviews`} className="btn btn-success">
+              <h4 className="my-5">You submitted successfully!</h4>
+              <Link to={`/restaurants/${restaurantId}/reviews`} className="btn btn-outline-primary">
                 Back to Reviews
               </Link>
             </div>
           ) : (
             <div>
-              <div className="form-group">
+              <div className="form-group edit-review-form my-5">
                 <label htmlFor="description">Edit Review</label>
                 <input
                   type="text"
@@ -71,7 +71,7 @@ function EditReview({ user }) {
                   name="text"
                 />
               </div>
-              <button onClick={saveReview} className="btn btn-success">
+              <button onClick={saveReview} className="btn btn-outline-primary">
                 Submit
               </button>
             </div>
