@@ -78,3 +78,16 @@
 {"level":"info","message":"Getting all restaurants","timestamp":"2023-12-13 02:07:03"}
 {"level":"info","message":"Getting restaurant with ID: 6574a6698faa9633480ed92c","timestamp":"2023-12-13 02:07:03"}
 {"level":"info","message":"Getting reviews of the restuarant with Id:6574a6698ed92c","timestamp":"2023-12-13 02:07:03"}
+{"level":"info","message":"Database is connected and server is running","timestamp":"2023-12-13 11:38:04"}
+{"level":"info","message":"Getting all restaurants","timestamp":"2023-12-13 11:38:14"}
+{"level":"info","message":"Getting cuisines","timestamp":"2023-12-13 11:38:14"}
+{"level":"info","message":"Getting all restaurants","timestamp":"2023-12-13 11:38:24"}
+{"level":"info","message":"Getting cuisines","timestamp":"2023-12-13 11:38:25"}
+{"level":"info","message":"Getting all restaurants","timestamp":"2023-12-13 12:01:02"}
+{"level":"info","message":"Getting cuisines","timestamp":"2023-12-13 12:01:02"}
+{"level":"info","message":"Getting restaurant with ID: 65744be231289a3e81fc72f3","timestamp":"2023-12-13 12:01:03"}
+{"level":"info","message":"Getting reviews of the restuarant with Id:65744be231289a3e81fc72f3","timestamp":"2023-12-13 12:01:04"}
+{"level":"info","message":"Getting all restaurants","timestamp":"2023-12-13 12:01:11"}
+{"level":"info","message":"Getting cuisines","timestamp":"2023-12-13 12:01:11"}
+{"level":"info","message":"Getting restaurant with ID: 65744be231289a3e81fc72f4","timestamp":"2023-12-13 12:01:12"}
+{"level":"info","message":"Getting reviews of the restuarant with Id:65744be231289a3e81fc72f4","timestamp":"2023-12-13 12:01:13"}
