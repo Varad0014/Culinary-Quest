@@ -17,6 +17,7 @@ export default class ReviewsDataAccess {
     }
   }
   static async getReviewById(reviewId) {
+    // Get specific review by its ID
     try {
       const review = await Review.findById(reviewId);
       return review;
