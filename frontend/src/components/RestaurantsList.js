@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import RestaurantDataService from "../services/restaurant-services.js";
 import Restaurant from "./Restaurant.js";
+import "../css/RestaurantsList.css"
 
 function RestaurantsList() {
     const [restaurants, setRestaurants] = useState([]);

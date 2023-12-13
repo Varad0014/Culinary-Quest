@@ -36,23 +36,3 @@
   color: white;
 }
 
-.restaurant-list .input-group{
-  padding: 0 40px;
-  flex-wrap: nowrap;
-}
-
-.restaurant-list input{
-  width: 90%;
-  border-radius: 20px !important;
-  padding: 10px;
-  font-size: 1.2rem;
-  border: 2px solid rgb(70, 70, 250);
-}
-
-.restaurant-list select{
-  padding: 10px;
-  border-radius: 20px !important;
-  margin-right: 10px;
-  font-size: 1.2rem;
-  border: 2px solid rgb(70, 70, 250);
-}

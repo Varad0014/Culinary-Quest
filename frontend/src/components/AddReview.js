@@ -35,7 +35,7 @@ function AddReview({ user }) {
     }
 
     return (
-        <div >
+        <div className="add-review-page">
             {user ? (
                 <div className="submit-form">
                     {submitted ? (
@@ -46,8 +46,8 @@ function AddReview({ user }) {
                             </Link>
                         </div>
                     ) : (
-                        <div>
-                            <div className="form-group  add-review-form my-5">
+                        <div className="add-review-container">
+                            <div className="form-group  my-5">
                                 <label htmlFor="description">
                                     Create Review
                                 </label>

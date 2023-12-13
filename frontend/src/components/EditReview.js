@@ -47,7 +47,7 @@ function EditReview({ user }) {
   }
 
   return (
-    <div>
+    <div className="edit-review-page">
       {review ? (
         <div className="submit-form">
           {submitted ? (
@@ -58,8 +58,8 @@ function EditReview({ user }) {
               </Link>
             </div>
           ) : (
-            <div>
-              <div className="form-group edit-review-form my-5">
+            <div className="edit-review-container">
+              <div className="form-group my-5">
                 <label htmlFor="description">Edit Review</label>
                 <input
                   type="text"

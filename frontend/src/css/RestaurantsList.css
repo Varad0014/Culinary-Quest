@@ -1,0 +1,26 @@
+.restaurant-list .input-group{
+    padding: 0 40px;
+    flex-wrap: nowrap;
+  }
+  
+  .restaurant-list input, .restaurant-list input:focus{
+    width: 90%;
+    border-radius: 20px !important;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 2px solid rgb(70, 70, 250);
+    color: #2196f3;
+  }
+  
+  .restaurant-list input::placeholder{
+    color: #2196f3;
+  }
+  .restaurant-list select{
+    padding: 10px;
+    border-radius: 20px !important;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    border: 2px solid rgb(70, 70, 250);
+    color: #2196f3;
+  }
+  

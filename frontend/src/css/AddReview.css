@@ -1,13 +1,27 @@
-.add-review-login{
+.add-review-page{
     min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    font-size: 4rem;
+    /* align-items: center; */
     color: white;
 }
+.add-review-container{
+    background-color: #2196f3;
+    padding: 50px 100px;
+    border: 1px solid rgb(70, 70, 250);
+    color: white;
+    box-shadow: 0px 0px 10px 3px rgb(70, 70, 250);
+    border-radius: 20px;
+}
+.add-review-container label{
+    font-size: 2rem; 
+}
 
-.add-review-form label{
-    font-size: 2rem;
+.add-review-container input, 
+.add-review-container input:focus{
+    font-size: 1.2rem;
+    color: #2196f3;
+    padding: 10px;
+    border: 2px solid rgb(70, 70, 250);
 }
