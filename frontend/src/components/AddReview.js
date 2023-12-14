@@ -67,7 +67,7 @@ function AddReview({ user }) {
                     )}
                 </div>
             ) : (
-                <div className="container add-review-login">Please log in</div>
+                <div className="container login-message">Please log in</div>
             )}
         </div>)
 };
