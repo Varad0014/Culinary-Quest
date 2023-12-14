@@ -489,3 +489,4 @@
 {"level":"info","message":"Getting reviews of the restuarant with Id:65744be231289a3e81fc72f3","timestamp":"2023-12-14 09:47:59"}
 {"level":"info","message":"Getting all restaurants","timestamp":"2023-12-14 09:48:13"}
 {"level":"info","message":"Getting cuisines","timestamp":"2023-12-14 09:48:13"}
+{"level":"info","message":"Database is connected and server is running","timestamp":"2023-12-14 14:20:29"}
