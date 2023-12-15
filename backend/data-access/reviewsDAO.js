@@ -1,5 +1,6 @@
 import Review from "../models/review.js";
 import mongoose from "mongoose";
+import logger from "../logger/logger.js";
 
 export default class ReviewsDataAccess {
   //Get all reviews for a particular restuarant
@@ -13,6 +14,7 @@ export default class ReviewsDataAccess {
       return { reviewsList: getResponse, totalNumReviews: getResponse.length };
     } catch (e) {
       console.error(`Unable to get reviews: ${e}`);
+      logger.error(`No reviews for the restaurant with Id ${restaurantId}`);
       return { reviewsList: [], totalNumReviews: 0 };
     }
   }
