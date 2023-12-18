@@ -3,13 +3,13 @@ version: "3.9"
 services:
   mongo_db:
     container_name: mongo_container
-    image: tejdocker32/restaurantmongo:latest
+    image: jaguar14/restaurantmongo:latest
     restart: always
     volumes:
       - mongo_db:/data/db
 
   backend:
-    image: tejdocker32/backend-img
+    image: jaguar14/backend-img
     ports:
       - "4000:4000"
     environment:
@@ -19,7 +19,7 @@ services:
       - mongo_db
 
   frontend:
-    image: tejdocker32/frontend-img
+    image: jaguar14/frontend-img
     ports:
       - "3000:3000"
     depends_on:
